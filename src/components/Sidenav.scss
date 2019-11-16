@@ -12,8 +12,29 @@
 .sidenav__list-item {
   padding: 20px 20px 20px 40px;
   color: #ddd;
+  position: relative;
 }
 .sidenav__list-item:hover {
   background-color: rgba(255, 255, 255, 0.2);
   cursor: pointer;
+}
+
+//side border
+
+.sidenav__list-item::before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom;
+  transition: transform 0.2s ease-in-out;
+}
+.sidenav__list-item:hover::before {
+  transform: scaleX(1);
+  transition: transform 0.2s ease-in-out;
+  background-color: #ebe726;
 }

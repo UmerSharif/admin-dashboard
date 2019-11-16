@@ -1,9 +1,10 @@
 import React from "react";
-
+import "./Header.scss";
 export default function Header() {
   return (
     <header className="header">
-      <p>header</p>
+      <div className="header__search">Search...</div>
+      <div className="header__avatar">Your face</div>
     </header>
   );
 }
