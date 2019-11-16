@@ -1,22 +1,29 @@
-.App {
-  text-align: center;
+.grid-container {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas:
+    "sidenav header"
+    "sidenav main"
+    "sidenav footer";
+  height: 100vh;
+}
+.header {
+  grid-area: header;
+  background-color: #648ca6;
 }
 
-.App-logo {
-  height: 40vmin;
+.sidenav {
+  grid-area: sidenav;
+  background-color: #394263;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main {
+  grid-area: main;
+  background-color: #8fd4d9;
 }
 
-.App-link {
-  color: #09d3ac;
+.footer {
+  grid-area: footer;
+  background-color: #648ca6;
 }
