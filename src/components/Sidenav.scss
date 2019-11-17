@@ -21,12 +21,17 @@
 .sidenav__list-item a {
   display: block;
   padding: 20px 20px 20px 40px;
+  color: #ddd;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 .sidenav__list-item a:hover,
 .sidenav__list-item a:active,
+.sidenav__list-item a:focus,
 .sidenav__list-item a.active {
   background-color: #444974;
   cursor: pointer;
+  color: #e6bd55;
 }
 
 //side border
