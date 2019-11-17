@@ -7,16 +7,23 @@ import Main from "./pages/Main";
 import Footer from "./components/Footer";
 import ServerDetail from "./pages/ServerDetail";
 import Threads from "./pages/Threads";
+import Settings from "./components/Settings";
 
 function App() {
   return (
     <Router>
       <div className="grid-container">
-        <Header />
-        <Sidenav />
-        <Route path="/home" component={Main}></Route>
-
-        <Footer />
+        <section className="nav">
+          <Sidenav />
+        </section>
+        <section className="contents">
+          <Header />
+          <Route exact path="/" component={Main}></Route>
+          <Route exact path="/servers" component={ServerDetail}></Route>
+          <Route exact path="/threads" component={Threads}></Route>
+          <Route exact path="/settings" component={Settings}></Route>
+          <Footer />
+        </section>
       </div>
     </Router>
   );

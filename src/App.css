@@ -1,16 +1,16 @@
 .grid-container {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  grid-template-rows: 50px 1fr 50px;
-  grid-template-areas:
-    "sidenav header"
-    "sidenav main"
-    "sidenav footer";
   height: 100vh;
+  display: flex;
+}
+
+.contents {
+  width: 100%;
+  margin-left: 15rem;
 }
 .header {
   grid-area: header;
   background-color: #648ca6;
+  display: inline-block;
 }
 
 .sidenav {
@@ -21,6 +21,7 @@
 .main {
   grid-area: main;
   background-color: #8fd4d9;
+  height: 96.3%;
 }
 
 .footer {
