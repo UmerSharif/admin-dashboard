@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./ServerDetail.scss";
+import Relationships from "../components/Tables/Relationships/Relationships";
 import Accordian from "../components/Accordian/Accordian";
 export default function ServerDetail() {
-  //testing with async
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -19,7 +19,6 @@ export default function ServerDetail() {
         }
       });
       const { data } = result.data;
-      console.log(data);
       setData(data);
     } catch (error) {
       setIsError(true);
@@ -51,16 +50,16 @@ export default function ServerDetail() {
         <span>ID: {serverID}</span>
         <span> Type: {type}</span>
         <section key={index}>
-          {sdata.map((sd, sindex) => {
+          {/* {sdata.map((sd, sindex) => {
             return (
               <ul key={sindex}>
                 <li>{sd.id}</li>
                 <li>{sd.type}</li>
               </ul>
             );
-          })}
+          })} */}
+          <Relationships selfLinks={selfLinks} />
         </section>
-        <p>{selfLinks}</p>
       </>
     );
 
