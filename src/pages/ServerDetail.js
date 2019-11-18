@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./ServerDetail.scss";
+import Accordian from "../components/Accordian/Accordian";
 export default function ServerDetail() {
   //testing with async
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
@@ -18,8 +19,8 @@ export default function ServerDetail() {
         }
       });
       const { data } = result.data;
-      setData(data);
       console.log(data);
+      setData(data);
     } catch (error) {
       setIsError(true);
     }
@@ -30,32 +31,50 @@ export default function ServerDetail() {
     fetchData();
   }, []);
 
-  //testing with async
+  //extracting data
 
-  // const [state, setState] = useState(null);
+  const renderedElements = data.map((obj, index) => {
+    //destructuring data
+    const {
+      id: serverID,
+      type,
+      links: { self: selfLinks },
+      relationships: {
+        monitors: { links: mlinks, data: mdata },
+        services: { links: slinks, data: sdata }
+      },
+      attributes: { parameters, statistics }
+    } = obj;
 
-  // useEffect(() => {
-  //   axios
-  //     .get("http://54.229.207.205:8989/v1/servers", {
-  //       auth: {
-  //         username: "user2",
-  //         password: "hotloaf58"
-  //       }
-  //     })
-  //     .then(res => {
-  //       console.log(res.status);
-  //       const { data } = res.data;
-  //       //console.log(serversData);
-  //       // const { data } = serversData;
-  //       // console.log(data);
-  //       setState(data);
-  //     });
-  // }, []);
-  // // const { data } = state;
-  // console.log(state);
+    const elements = (
+      <>
+        <span>ID: {serverID}</span>
+        <span> Type: {type}</span>
+        <section key={index}>
+          {sdata.map((sd, sindex) => {
+            return (
+              <ul key={sindex}>
+                <li>{sd.id}</li>
+                <li>{sd.type}</li>
+              </ul>
+            );
+          })}
+        </section>
+        <p>{selfLinks}</p>
+      </>
+    );
+
+    return (
+      <Accordian serverID={serverID} key={index}>
+        {elements}
+      </Accordian>
+    );
+  });
+
   return (
     <div className="server">
       <h1>server Details</h1>
+      {renderedElements}
     </div>
   );
 }
