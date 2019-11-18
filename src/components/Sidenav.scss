@@ -19,11 +19,17 @@
   position: relative;
 }
 .sidenav__list-item a {
-  display: block;
+  // display: block;
   padding: 20px 20px 20px 40px;
   color: #ddd;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: 1rem;
+  }
 }
 .sidenav__list-item a:hover,
 .sidenav__list-item a:active,
@@ -71,4 +77,10 @@
   span {
     text-transform: capitalize;
   }
+}
+
+.menu__icons {
+  font-size: 1.2rem;
+  margin-right: 5px;
+  text-align: center;
 }

@@ -1,6 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Sidenav.scss";
+
+import { FaHome, FaServer, FaChartArea, FaCog } from "react-icons/fa";
+
 export default function Sidenav() {
   return (
     <aside className="sidenav">
@@ -10,22 +13,22 @@ export default function Sidenav() {
       <ul className="sidenav__list">
         <li className="sidenav__list-item">
           <NavLink exact to="/" activeClassName="active">
-            Home
+            <FaHome className="menu__icons" /> <span>Home</span>
           </NavLink>
         </li>
         <li className="sidenav__list-item">
           <NavLink to="/servers" activeClassName="active">
-            Servers
+            <FaServer className="menu__icons" /> <span>Servers</span>
           </NavLink>
         </li>
         <li className="sidenav__list-item">
           <NavLink to="/threads" activeClassName="active">
-            Threads
+            <FaChartArea className="menu__icons" /> <span>Threads</span>
           </NavLink>
         </li>
         <li className="sidenav__list-item">
           <NavLink to="/settings" activeClassName="active">
-            Settings
+            <FaCog className="menu__icons" /> <span>Settings </span>
           </NavLink>
         </li>
       </ul>
