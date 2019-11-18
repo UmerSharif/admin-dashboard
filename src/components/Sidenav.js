@@ -2,7 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Sidenav.scss";
 
-import { FaHome, FaServer, FaChartArea, FaCog } from "react-icons/fa";
+import {
+  FaHome,
+  FaServer,
+  FaChartArea,
+  FaCog,
+  FaInfoCircle
+} from "react-icons/fa";
 
 export default function Sidenav() {
   return (
@@ -32,6 +38,11 @@ export default function Sidenav() {
           </NavLink>
         </li>
       </ul>
+      <div className="help__center ">
+        <a target="_blank" href="https://mariadb.com/kb/en/maxscale/">
+          <FaInfoCircle className="menu__icons" /> <span>Help Center</span>
+        </a>
+      </div>
     </aside>
   );
 }
