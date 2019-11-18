@@ -1,7 +1,8 @@
 import React from "react";
 import Links from "./Links";
+import Sdata from "./Sdata";
 import "./Relationships.scss";
-export default function Relationships({ selfLinks }) {
+export default function Relationships({ slinks, sdata }) {
   return (
     <section className="relationships">
       <div className="header__relationship Theader">
@@ -13,7 +14,8 @@ export default function Relationships({ selfLinks }) {
           <h4>Services</h4>
         </div>
 
-        <Links selfLinks={selfLinks} />
+        <Links slinks={slinks} />
+        <Sdata sdata={sdata} />
       </section>
     </section>
   );

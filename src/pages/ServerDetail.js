@@ -39,8 +39,14 @@ export default function ServerDetail() {
       type,
       links: { self: selfLinks },
       relationships: {
-        monitors: { links: mlinks, data: mdata },
-        services: { links: slinks, data: sdata }
+        monitors: {
+          links: { self: mlinks },
+          data: mdata
+        },
+        services: {
+          links: { self: slinks },
+          data: sdata
+        }
       },
       attributes: { parameters, statistics }
     } = obj;
@@ -58,7 +64,7 @@ export default function ServerDetail() {
               </ul>
             );
           })} */}
-          <Relationships selfLinks={selfLinks} />
+          <Relationships slinks={slinks} sdata={sdata} />
         </section>
       </>
     );
