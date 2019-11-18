@@ -1,3 +1,6 @@
+$app-background-color: #f2f3f5;
+$dark-color: #26254d;
+$light-grey: #e3e4e6;
 .grid-container {
   height: 100vh;
   display: flex;
@@ -9,22 +12,21 @@
 }
 .header {
   grid-area: header;
-  background-color: #648ca6;
+  background-color: $light-grey;
   display: inline-block;
 }
 
 .sidenav {
-  grid-area: sidenav;
-  background-color: #26254d;
+  background-color: $dark-color;
 }
 
 .main {
   grid-area: main;
-  background-color: #8fd4d9;
+  background-color: $app-background-color;
   height: 96.3%;
 }
 
 .footer {
   grid-area: footer;
-  background-color: #648ca6;
+  background-color: $light-grey;
 }

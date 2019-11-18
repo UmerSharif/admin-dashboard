@@ -1,6 +1,8 @@
+$app-background-color: #f2f3f5;
+
 .server {
   height: 96.3%;
-  background-color: violet;
+  background-color: $app-background-color;
   overflow: auto;
 }
 
