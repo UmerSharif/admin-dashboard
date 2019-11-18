@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { FaTrashAlt, FaServer } from "react-icons/fa";
 import Chevron from "./Chevron";
 import "./Accordian.scss";
 export default function Accordian(props) {
@@ -13,6 +14,10 @@ export default function Accordian(props) {
 
   const toogleActive = () => {
     setActive(!active);
+  };
+
+  const deleteServer = id => {
+    alert(`deleting server with id ${id}`);
   };
 
   //extracting server id from children passed to accordian
@@ -30,10 +35,14 @@ export default function Accordian(props) {
         className={`accordion ${active ? "active" : ""}`}
         onClick={toogleActive}
       >
-        <p className="accordion__title">View {props.serverID} </p>
+        <span className="server__icon">
+          <FaServer className="fa__icons" />
+        </span>
+
+        <span className="accordion__title">View {props.serverID} </span>
         <Chevron
           className={active ? "accordion__icon rotate" : "accordion__icon"}
-          width={10}
+          width={15}
           fill={"#777"}
         />
       </button>

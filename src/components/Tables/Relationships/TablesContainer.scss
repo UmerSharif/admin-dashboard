@@ -23,11 +23,14 @@ $services-background: #c3b7b7;
 }
 
 .services {
-  margin-top: 3px;
   border-left: 5px solid $services-background;
 }
 
-.header__services {
+.header__sub__relationship {
   background-color: $services-background;
   padding: 5px;
+}
+
+.monitors {
+  border-left: 5px solid $services-background;
 }

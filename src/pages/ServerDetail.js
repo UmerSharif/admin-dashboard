@@ -56,15 +56,12 @@ export default function ServerDetail() {
         <span>ID: {serverID}</span>
         <span> Type: {type}</span>
         <section key={index}>
-          {/* {sdata.map((sd, sindex) => {
-            return (
-              <ul key={sindex}>
-                <li>{sd.id}</li>
-                <li>{sd.type}</li>
-              </ul>
-            );
-          })} */}
-          <TablesContainer slinks={slinks} sdata={sdata} />
+          <TablesContainer
+            slinks={slinks}
+            sdata={sdata}
+            mlinks={mlinks}
+            mdata={mdata}
+          />
         </section>
       </>
     );
