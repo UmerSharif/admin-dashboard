@@ -1,8 +1,8 @@
 import React from "react";
-import Links from "./Links";
+import Slinks from "./Slinks";
 import Sdata from "./Sdata";
-import "./Relationships.scss";
-export default function Relationships({ slinks, sdata }) {
+import "./TablesContainer.scss";
+export default function TablesContainer({ slinks, sdata }) {
   return (
     <section className="relationships">
       <div className="header__relationship Theader">
@@ -14,7 +14,7 @@ export default function Relationships({ slinks, sdata }) {
           <h4>Services</h4>
         </div>
 
-        <Links slinks={slinks} />
+        <Slinks slinks={slinks} />
         <Sdata sdata={sdata} />
       </section>
     </section>

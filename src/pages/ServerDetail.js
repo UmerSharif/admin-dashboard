@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./ServerDetail.scss";
-import Relationships from "../components/Tables/Relationships/Relationships";
+import TablesContainer from "../components/Tables/Relationships/TablesContainer";
 import Accordian from "../components/Accordian/Accordian";
 export default function ServerDetail() {
   const [data, setData] = useState([]);
@@ -64,7 +64,7 @@ export default function ServerDetail() {
               </ul>
             );
           })} */}
-          <Relationships slinks={slinks} sdata={sdata} />
+          <TablesContainer slinks={slinks} sdata={sdata} />
         </section>
       </>
     );

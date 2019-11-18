@@ -1,7 +1,7 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
-import "./Links.scss";
-export default function Links({ slinks }) {
+import "./Slinks.scss";
+export default function Slinks({ slinks }) {
   return (
     <div className="links__table">
       <Table striped bordered hover>
