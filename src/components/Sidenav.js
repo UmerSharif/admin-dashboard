@@ -39,7 +39,11 @@ export default function Sidenav() {
         </li>
       </ul>
       <div className="help__center ">
-        <a target="_blank" href="https://mariadb.com/kb/en/maxscale/">
+        <a
+          target="_blank"
+          href="https://mariadb.com/kb/en/maxscale/"
+          rel="noopener noreferrer"
+        >
           <FaInfoCircle className="menu__icons" /> <span>Help Center</span>
         </a>
       </div>

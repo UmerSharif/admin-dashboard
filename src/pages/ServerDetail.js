@@ -31,7 +31,6 @@ export default function ServerDetail() {
   }, []);
 
   //extracting data
-  console.log(data);
 
   const renderedElements = data.map((obj, index) => {
     //destructuring data

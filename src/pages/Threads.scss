@@ -5,3 +5,10 @@ $app-background-color: #f2f3f5;
   background-color: $app-background-color;
   overflow: auto;
 }
+
+.graph__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2.5rem;
+  padding: 1.2rem;
+}
