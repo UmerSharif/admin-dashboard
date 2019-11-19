@@ -1,8 +1,32 @@
 import React from "react";
 import Links from "./Links";
 import Data from "./Data";
+import AttributeTable from "../Attributes/AttributeTable";
 import "./TablesContainer.scss";
-export default function TablesContainer({ slinks, sdata, mlinks, mdata }) {
+export default function TablesContainer({
+  slinks,
+  sdata,
+  mlinks,
+  mdata,
+  last_event,
+  master_id,
+  node_id,
+  replication_lag,
+  state,
+  triggered_at,
+  version_string,
+  parameters,
+  statistics
+}) {
+  const AtrributeTableData = {
+    last_event,
+    master_id,
+    node_id,
+    replication_lag,
+    state,
+    triggered_at,
+    version_string
+  };
   return (
     <>
       <section className="main__content__header">
@@ -30,6 +54,7 @@ export default function TablesContainer({ slinks, sdata, mlinks, mdata }) {
         <div className="header__attributes Theader">
           <h3>Attributes</h3>
         </div>
+        <AttributeTable data={AtrributeTableData} />
       </section>
     </>
   );
