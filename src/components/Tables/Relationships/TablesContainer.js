@@ -4,6 +4,7 @@ import Data from "./Data";
 import AttributeTable from "../Attributes/AttributeTable";
 import "./TablesContainer.scss";
 import Parameters from "../Attributes/Parameters";
+import Statistics from "../Attributes/Statistics";
 export default function TablesContainer({
   slinks,
   sdata,
@@ -59,6 +60,7 @@ export default function TablesContainer({
 
         <section className="parameters">
           <Parameters data={parameters} />
+          <Statistics data={statistics} />
         </section>
       </section>
     </>
