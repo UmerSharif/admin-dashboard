@@ -29,13 +29,13 @@ export default function Threads() {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      fetchData();
-    }, 1000);
+    // const intervalId = setInterval(() => {
+    //   fetchData();
+    // }, 1000);
 
-    return () => clearInterval(intervalId);
+    // return () => clearInterval(intervalId);
+    fetchData();
   }, []);
-
   console.log(data);
 
   const LoadRenderedData = data.map((obj, index) => {
@@ -53,7 +53,10 @@ export default function Threads() {
 
   return (
     <div className="threads">
-      <h1>Threads</h1>
+      <div className="main-header__thread">
+        <div className="main-header__heading">Hello User</div>
+        <div className="main-header__updates">Recent Items</div>
+      </div>
       <div className="graph__container"> {LoadRenderedData}</div>
     </div>
   );

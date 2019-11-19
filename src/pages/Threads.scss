@@ -4,6 +4,7 @@ $app-background-color: #f2f3f5;
   height: 96.3%;
   background-color: $app-background-color;
   overflow: auto;
+  width: 100%;
 }
 
 .graph__container {
@@ -11,4 +12,17 @@ $app-background-color: #f2f3f5;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2.5rem;
   padding: 1.2rem;
+}
+
+.main-header__thread {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px;
+  height: 100px; /* Force our height since we don't have actual content yet */
+  background-color: #e3e4e6;
+  color: slategray;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
 }

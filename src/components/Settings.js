@@ -3,7 +3,12 @@ import "./Settings.scss";
 export default function Settings() {
   return (
     <div className="settings">
-      <h1>Setting page</h1>
+      <div className="main-header__settings">
+        <div className="main-header__heading">
+          Hello User this is setting page.
+        </div>
+        <div className="main-header__updates">Personalize your settings</div>
+      </div>
     </div>
   );
 }

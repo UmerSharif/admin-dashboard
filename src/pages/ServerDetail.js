@@ -94,7 +94,10 @@ export default function ServerDetail() {
 
   return (
     <div className="server">
-      <h1>server Details</h1>
+      <div className="main-header__server">
+        <div className="main-header__heading">Hello User</div>
+        <div className="main-header__updates">Recent Items</div>
+      </div>
       {renderedElements}
     </div>
   );
