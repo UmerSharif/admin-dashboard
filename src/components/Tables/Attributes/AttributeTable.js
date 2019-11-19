@@ -13,7 +13,7 @@ export default function AttributeTable({
 }) {
   return (
     <div className="__tables">
-      <Table striped bordered hover>
+      <Table striped bordered hover responsive="xl">
         <thead>
           <tr>
             <th className="header__center" colSpan="7">

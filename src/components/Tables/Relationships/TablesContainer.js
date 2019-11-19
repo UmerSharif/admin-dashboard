@@ -3,6 +3,7 @@ import Links from "./Links";
 import Data from "./Data";
 import AttributeTable from "../Attributes/AttributeTable";
 import "./TablesContainer.scss";
+import Parameters from "../Attributes/Parameters";
 export default function TablesContainer({
   slinks,
   sdata,
@@ -42,19 +43,23 @@ export default function TablesContainer({
           <Links links={slinks} />
           <Data data={sdata} />
         </section>
-        <div className="monitors">
+        <section className="monitors">
           <div className="header__sub__relationship Theader">
             <h4>Monitors</h4>
           </div>
           <Links links={mlinks} />
           <Data data={mdata} />
-        </div>
+        </section>
       </section>
       <section className="main__content__header">
         <div className="header__attributes Theader">
           <h3>Attributes</h3>
         </div>
         <AttributeTable data={AtrributeTableData} />
+
+        <section className="parameters">
+          <Parameters data={parameters} />
+        </section>
       </section>
     </>
   );
