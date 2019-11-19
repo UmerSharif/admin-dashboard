@@ -31,6 +31,7 @@ export default function ServerDetail() {
   }, []);
 
   //extracting data
+  console.log(data);
 
   const renderedElements = data.map((obj, index) => {
     //destructuring data
@@ -48,7 +49,17 @@ export default function ServerDetail() {
           data: sdata
         }
       },
-      attributes: { parameters, statistics }
+      attributes: {
+        last_event,
+        master_id,
+        node_id,
+        replication_lag,
+        state,
+        triggered_at,
+        version_string,
+        parameters,
+        statistics
+      }
     } = obj;
 
     const elements = (
@@ -61,6 +72,15 @@ export default function ServerDetail() {
             sdata={sdata}
             mlinks={mlinks}
             mdata={mdata}
+            parameters={parameters}
+            statistics={statistics}
+            last_event={last_event}
+            master_id={master_id}
+            node_id={node_id}
+            replication_lag={replication_lag}
+            state={state}
+            triggered_at={triggered_at}
+            version_string={version_string}
           />
         </section>
       </>

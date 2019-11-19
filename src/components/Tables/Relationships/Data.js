@@ -1,8 +1,8 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
-export default function Sdata({ sdata }) {
+export default function Data({ data }) {
   return (
-    <div className="services__data__table">
+    <div className="__tables">
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -16,11 +16,11 @@ export default function Sdata({ sdata }) {
             <td>ID</td>
             <td>Type</td>
           </tr>
-          {sdata.map((sd, index) => {
+          {data.map((d, index) => {
             return (
               <tr key={index}>
-                <td>{sd.id}</td>
-                <td>{sd.type}</td>
+                <td>{d.id}</td>
+                <td>{d.type}</td>
               </tr>
             );
           })}

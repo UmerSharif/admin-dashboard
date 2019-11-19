@@ -1,31 +1,36 @@
 import React from "react";
-import Slinks from "./Slinks";
-import Sdata from "./Sdata";
-import Mlinks from "./Mlinks";
-import Mdata from "./Mdata";
+import Links from "./Links";
+import Data from "./Data";
 import "./TablesContainer.scss";
 export default function TablesContainer({ slinks, sdata, mlinks, mdata }) {
   return (
-    <section className="relationships">
-      <div className="header__relationship Theader">
-        <h3>Relationships</h3>
-      </div>
-
-      <section className="services">
-        <div className="header__sub__relationship Theader">
-          <h4>Services</h4>
+    <>
+      <section className="main__content__header">
+        <div className="header__relationship Theader">
+          <h3>Relationships</h3>
         </div>
 
-        <Slinks slinks={slinks} />
-        <Sdata sdata={sdata} />
+        <section className="services">
+          <div className="header__sub__relationship Theader">
+            <h4>Services</h4>
+          </div>
+
+          <Links links={slinks} />
+          <Data data={sdata} />
+        </section>
+        <div className="monitors">
+          <div className="header__sub__relationship Theader">
+            <h4>Monitors</h4>
+          </div>
+          <Links links={mlinks} />
+          <Data data={mdata} />
+        </div>
       </section>
-      <div className="monitors">
-        <div className="header__sub__relationship Theader">
-          <h4>Monitors</h4>
+      <section className="main__content__header">
+        <div className="header__attributes Theader">
+          <h3>Attributes</h3>
         </div>
-        <Mlinks mlinks={mlinks} />
-        <Mdata mdata={mdata} />
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

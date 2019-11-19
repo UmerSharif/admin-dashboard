@@ -1,7 +1,7 @@
 $relationship-background: #cddbe8;
 $services-background: #c3b7b7;
 
-.relationships {
+.main__content__header {
   border-left: 5px solid $relationship-background;
   .Theader {
     text-align: center;
@@ -33,4 +33,9 @@ $services-background: #c3b7b7;
 
 .monitors {
   border-left: 5px solid $services-background;
+  margin-top: 4px;
+}
+
+.__tables {
+  padding: 1rem;
 }

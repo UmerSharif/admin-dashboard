@@ -1,9 +1,8 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
-// import "./Mlinks.scss";
-export default function Mlinks({ mlinks }) {
+export default function Links({ links }) {
   return (
-    <div className="links__table">
+    <div className="__tables">
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -15,7 +14,7 @@ export default function Mlinks({ mlinks }) {
         <tbody>
           <tr>
             <td>Self</td>
-            <td>{mlinks}</td>
+            <td>{links}</td>
           </tr>
         </tbody>
       </Table>

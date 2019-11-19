@@ -45,6 +45,9 @@ export default function Accordian(props) {
           width={15}
           fill={"#777"}
         />
+        <span className="delete__icon">
+          <FaTrashAlt className="fa__icons" />
+        </span>
       </button>
       <div ref={contentRef} className="accordion__content">
         {props.children}
