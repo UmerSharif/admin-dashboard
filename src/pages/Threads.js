@@ -45,10 +45,11 @@ export default function Threads() {
         stats: {
           load: { last_second }
         }
-      }
+      },
+      id: threadID
     } = obj;
 
-    return <Load last_second={last_second} key={index} />;
+    return <Load last_second={last_second} key={index} threadID={threadID} />;
   });
 
   return (
