@@ -4,8 +4,10 @@ import CreateServerForm from "../components/Forms/CreateServerForm";
 export default function CreateServer() {
   return (
     <div className="create__server">
-      <h1>Create Server</h1>
-      <CreateServerForm />
+      <br />
+      <div className="create__server__inner">
+        <CreateServerForm />
+      </div>
     </div>
   );
 }

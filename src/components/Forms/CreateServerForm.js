@@ -1,4 +1,5 @@
 import React from "react";
+import "./CreateServerForm.scss";
 import {
   MDBContainer,
   MDBRow,
@@ -12,11 +13,17 @@ export default function CreateServerForm() {
   return (
     <MDBContainer>
       <MDBRow>
-        <MDBCol md="6">
+        <MDBCol md="12">
           <MDBCard>
+            <div className="header pt-3 peach-gradient header--custom">
+              <MDBRow className="d-flex justify-content-center">
+                <h3 className="white-text mb-3 pt-3 font-weight-bold">
+                  Create Server
+                </h3>
+              </MDBRow>
+            </div>
             <MDBCardBody>
               <form>
-                <p className="h4 text-center py-4">Sign up</p>
                 <div className="grey-text">
                   <MDBInput
                     label="Your name"
@@ -54,8 +61,8 @@ export default function CreateServerForm() {
                   />
                 </div>
                 <div className="text-center py-4 mt-3">
-                  <MDBBtn color="cyan" type="submit">
-                    Register
+                  <MDBBtn color="indigo" type="submit">
+                    Create
                   </MDBBtn>
                 </div>
               </form>
