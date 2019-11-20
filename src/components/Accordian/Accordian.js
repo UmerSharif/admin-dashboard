@@ -30,7 +30,7 @@ export default function Accordian(props) {
       <br />
       <div className="accordion__section">
         <button
-          className={`accordion ${active ? "active" : ""}`}
+          className={`accordion ${active ? "active--bar" : ""}`}
           onClick={toogleActive}
         >
           <span className="server__icon">
