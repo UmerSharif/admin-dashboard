@@ -9,6 +9,7 @@ export default function ServerDetail() {
   const [data, setData] = useState([]);
   const [isError, setIsError] = useState(false);
 
+  //api call function
   const fetchData = async () => {
     setIsError(false);
 
@@ -25,6 +26,8 @@ export default function ServerDetail() {
       setIsError(true);
     }
   };
+
+  //call api function using react hooks
 
   useEffect(() => {
     fetchData();
@@ -61,6 +64,8 @@ export default function ServerDetail() {
       }
     } = obj;
 
+    //passing data to our table container component
+
     const elements = (
       <>
         <span>ID: {serverID}</span>
@@ -84,7 +89,7 @@ export default function ServerDetail() {
         </section>
       </>
     );
-
+    // passing the return tables to accordian component
     return (
       <Accordian serverID={serverID} key={index}>
         {elements}
@@ -105,6 +110,7 @@ export default function ServerDetail() {
             <FaPlus className="fa__icons" /> <span>Server</span>
           </NavLink>
         </div>
+        {/* rendering the accordian component with all the tables here */}
         {renderedElements}
       </div>
     </>
