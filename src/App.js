@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import ServerDetail from "./pages/ServerDetail";
 import Threads from "./pages/Threads";
 import Settings from "./components/Settings";
+import CreateServer from "./components/CreateServer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/servers" component={ServerDetail}></Route>
           <Route exact path="/threads" component={Threads}></Route>
           <Route exact path="/settings" component={Settings}></Route>
+          <Route exact path="/createserver" component={CreateServer}></Route>
           <Footer />
         </section>
       </div>

@@ -15,7 +15,7 @@ export default function Parameters({
 }) {
   return (
     <div className="__tables">
-      <Table striped bordered hover responsive="xl">
+      <Table size="sm" striped bordered hover responsive="xl">
         <thead>
           <tr>
             <th className="header__center" colSpan="20">

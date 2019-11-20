@@ -79,6 +79,7 @@ $dark-color: #26254d;
   width: 200px;
   margin: 0 auto 3px auto;
   padding: 5px;
+  border-radius: 3px;
 
   .fa__icons {
     font-size: 2rem;
@@ -89,7 +90,7 @@ $dark-color: #26254d;
     cursor: pointer;
   }
   span {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #e12c51;
     font-weight: 600;
   }

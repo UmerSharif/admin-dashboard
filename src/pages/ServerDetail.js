@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import axios from "axios";
 import "./ServerDetail.scss";
 import TablesContainer from "../components/Tables/Relationships/TablesContainer";
@@ -97,6 +98,11 @@ export default function ServerDetail() {
         <div className="main-header__server">
           <div className="main-header__heading">Hello User</div>
           <div className="main-header__updates">Recent Items</div>
+        </div>
+        <div className="create__server">
+          <NavLink to="/createserver" activeClassName="active">
+            <span>Servers</span>
+          </NavLink>
         </div>
         {renderedElements}
       </div>
