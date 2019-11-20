@@ -100,7 +100,7 @@ export default function ServerDetail() {
           <div className="main-header__heading">Hello User</div>
           <div className="main-header__updates">Recent Items</div>
         </div>
-        <div className="create__server">
+        <div className="create__server__link">
           <NavLink to="/createserver" activeClassName="active">
             <FaPlus className="fa__icons" /> <span>Server</span>
           </NavLink>
