@@ -26,8 +26,7 @@ export default function CreateServerForm() {
               <form>
                 <div className="grey-text">
                   <MDBInput
-                    label="Your name"
-                    icon="user"
+                    label="data.id"
                     group
                     type="text"
                     validate
@@ -35,8 +34,7 @@ export default function CreateServerForm() {
                     success="right"
                   />
                   <MDBInput
-                    label="Your email"
-                    icon="envelope"
+                    label="data.type"
                     group
                     type="email"
                     validate
@@ -44,21 +42,14 @@ export default function CreateServerForm() {
                     success="right"
                   />
                   <MDBInput
-                    label="Confirm your email"
-                    icon="exclamation-triangle"
+                    label="protocol"
                     group
                     type="text"
                     validate
                     error="wrong"
                     success="right"
                   />
-                  <MDBInput
-                    label="Your password"
-                    icon="lock"
-                    group
-                    type="password"
-                    validate
-                  />
+                  <MDBInput label="address" group type="text" validate />
                 </div>
                 <div className="text-center py-4 mt-3">
                   <MDBBtn color="indigo" type="submit">
