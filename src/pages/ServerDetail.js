@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { FaPlus } from "react-icons/fa";
 import axios from "axios";
 import "./ServerDetail.scss";
 import TablesContainer from "../components/Tables/Relationships/TablesContainer";
@@ -101,7 +102,7 @@ export default function ServerDetail() {
         </div>
         <div className="create__server">
           <NavLink to="/createserver" activeClassName="active">
-            <span>Servers</span>
+            <FaPlus className="fa__icons" /> <span>Server</span>
           </NavLink>
         </div>
         {renderedElements}

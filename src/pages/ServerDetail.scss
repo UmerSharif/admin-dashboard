@@ -1,5 +1,4 @@
 $app-background-color: #f2f3f5;
-
 .server {
   height: 96.3%;
   background-color: $app-background-color;
@@ -26,4 +25,32 @@ $app-background-color: #f2f3f5;
   -webkit-box-shadow: 0 10px 6px -6px #777;
   -moz-box-shadow: 0 10px 6px -6px #777;
   box-shadow: 0 10px 6px -6px #777;
+}
+
+//create button style
+
+.create__server {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #777;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .fa__icons {
+    font-size: 2rem;
+    color: #514fad;
+    margin-bottom: 4px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+  span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #514fad;
+  }
 }
