@@ -8,7 +8,9 @@ export default function Main() {
     <main className="main">
       <br />
       <div className="main-header">
-        <div className="main-header__heading">Hello User</div>
+        <div className="main-header__heading">
+          Hello User, Welcome to MaxScale Admin Panel
+        </div>
         <div className="main-header__updates">Recent Items</div>
       </div>
       <div className="server__thread__links__outer">

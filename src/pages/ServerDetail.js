@@ -102,7 +102,9 @@ export default function ServerDetail() {
       {isError && <div>Something went wrong ...</div>}
       <div className="server">
         <div className="main-header__server">
-          <div className="main-header__heading">Hello User</div>
+          <div className="main-header__heading">
+            Hello User, here you can View, Create and Delete Servers.
+          </div>
           <div className="main-header__updates">Recent Items</div>
         </div>
         <div className="create__server__link">

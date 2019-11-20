@@ -1,38 +1,54 @@
-$relationship-background: #cddbe8;
-$services-background: #c3b7b7;
-
+$relationship-background: #000046; /* fallback for old browsers */
+$relationship-background: -webkit-linear-gradient(
+  to left,
+  #1cb5e0,
+  #000046
+); /* Chrome 10-25, Safari 5.1-6 */
+$relationship-background: linear-gradient(
+  to left,
+  #1cb5e0,
+  #000046
+); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+$services-background: #f0f2f0; /* fallback for old browsers */
+$services-background: -webkit-linear-gradient(
+  to right,
+  #000c40,
+  #f0f2f0
+); /* Chrome 10-25, Safari 5.1-6 */
+$services-background: linear-gradient(
+  to right,
+  #000c40,
+  #f0f2f0
+); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 .main__content__header {
-  border-left: 5px solid $relationship-background;
+  border-left: 5px solid #000046;
   .Theader {
     text-align: center;
   }
   h3 {
     font-size: 1.3rem;
     font-weight: 600;
+    color: #ddd;
   }
   h4 {
     font-size: 1.2rem;
     font-weight: 600;
+    color: #ddd;
   }
 }
 
 .header__relationship {
-  background-color: $relationship-background;
+  background: $relationship-background;
   padding: 5px;
   height: 2.5rem;
 }
 
-.services {
-  border-left: 5px solid $services-background;
-}
-
 .header__sub__relationship {
-  background-color: $services-background;
+  background: $services-background;
   padding: 5px;
 }
 
 .monitors {
-  border-left: 5px solid $services-background;
   margin-top: 4px;
 }
 
@@ -43,6 +59,6 @@ $services-background: #c3b7b7;
 
 .header__attributes {
   margin-top: 3px;
-  background-color: $relationship-background;
+  background: $relationship-background;
   padding: 5px;
 }

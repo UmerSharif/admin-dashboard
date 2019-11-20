@@ -15,7 +15,7 @@ export default function CreateServerForm() {
       <MDBRow>
         <MDBCol md="12">
           <MDBCard>
-            <div className="header pt-3 peach-gradient header--custom">
+            <div className="header pt-3 custom-gradient header--custom">
               <MDBRow className="d-flex justify-content-center">
                 <h3 className="white-text mb-3 pt-3 font-weight-bold">
                   Create Server

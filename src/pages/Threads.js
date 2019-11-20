@@ -61,7 +61,10 @@ export default function Threads() {
       {isError && <div>Something went wrong ...</div>}
       <div className="threads">
         <div className="main-header__thread">
-          <div className="main-header__heading">Hello User</div>
+          <div className="main-header__heading">
+            Hello User, here the last_secod load is plotted for each thread.
+            Y-axis is Load, while the X-axis is time.
+          </div>
           <div className="main-header__updates">Recent Items</div>
         </div>
         {/* rendering the Load component returned from above */}
