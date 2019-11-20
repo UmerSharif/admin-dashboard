@@ -5,12 +5,11 @@ import TablesContainer from "../components/Tables/Relationships/TablesContainer"
 import Accordian from "../components/Accordian/Accordian";
 export default function ServerDetail() {
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
   const fetchData = async () => {
     setIsError(false);
-    setIsLoading(true);
+
     try {
       const result = await axios.get("http://54.229.207.205:8989/v1/servers", {
         auth: {
@@ -23,7 +22,6 @@ export default function ServerDetail() {
     } catch (error) {
       setIsError(true);
     }
-    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -37,7 +35,7 @@ export default function ServerDetail() {
     const {
       id: serverID,
       type,
-      links: { self: selfLinks },
+
       relationships: {
         monitors: {
           links: { self: mlinks },
@@ -93,12 +91,15 @@ export default function ServerDetail() {
   });
 
   return (
-    <div className="server">
-      <div className="main-header__server">
-        <div className="main-header__heading">Hello User</div>
-        <div className="main-header__updates">Recent Items</div>
+    <>
+      {isError && <div>Something went wrong ...</div>}
+      <div className="server">
+        <div className="main-header__server">
+          <div className="main-header__heading">Hello User</div>
+          <div className="main-header__updates">Recent Items</div>
+        </div>
+        {renderedElements}
       </div>
-      {renderedElements}
-    </div>
+    </>
   );
 }

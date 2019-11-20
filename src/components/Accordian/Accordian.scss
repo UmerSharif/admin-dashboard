@@ -67,5 +67,30 @@ $dark-color: #26254d;
 }
 
 .fa__icons {
-  font-size: 1.4rem;
+  font-size: 2rem;
+}
+
+.delete__icon {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  // padding: 0 0 1rem 0;
+  border: 1px solid #e12c51;
+  width: 200px;
+  margin: 0 auto 3px auto;
+  padding: 5px;
+
+  .fa__icons {
+    font-size: 2rem;
+    color: #e12c51;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+  span {
+    font-size: 1.5rem;
+    color: #e12c51;
+    font-weight: 600;
+  }
 }

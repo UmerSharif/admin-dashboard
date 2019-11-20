@@ -16,10 +16,6 @@ export default function Accordian(props) {
     setActive(!active);
   };
 
-  const deleteServer = id => {
-    alert(`deleting server with id ${id}`);
-  };
-
   //extracting server id from children passed to accordian
 
   // const x = props.children.props.children.map(d => {
@@ -30,28 +26,31 @@ export default function Accordian(props) {
   // const serverID = x[0][1];
 
   return (
-    <div className="accordion__section">
-      <button
-        className={`accordion ${active ? "active" : ""}`}
-        onClick={toogleActive}
-      >
-        <span className="server__icon">
-          <FaServer className="fa__icons" />
-        </span>
+    <>
+      <br />
+      <div className="accordion__section">
+        <button
+          className={`accordion ${active ? "active" : ""}`}
+          onClick={toogleActive}
+        >
+          <span className="server__icon">
+            <FaServer className="fa__icons" />
+          </span>
 
-        <span className="accordion__title">View {props.serverID} </span>
-        <Chevron
-          className={active ? "accordion__icon rotate" : "accordion__icon"}
-          width={15}
-          fill={"#777"}
-        />
-        <span className="delete__icon">
-          <FaTrashAlt className="fa__icons" />
-        </span>
-      </button>
-      <div ref={contentRef} className="accordion__content">
-        {props.children}
+          <span className="accordion__title">View {props.serverID} </span>
+          <Chevron
+            className={active ? "accordion__icon rotate" : "accordion__icon"}
+            width={15}
+            fill={"#777"}
+          />
+        </button>
+        <div ref={contentRef} className="accordion__content">
+          {props.children}
+          <div className="delete__icon">
+            <FaTrashAlt className="fa__icons" /> <span>Delete Server</span>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

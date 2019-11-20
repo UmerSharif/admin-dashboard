@@ -4,12 +4,11 @@ import "./Threads.scss";
 import Load from "../components/Graphs/Load";
 export default function Threads() {
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
   const fetchData = async () => {
     setIsError(false);
-    setIsLoading(true);
+
     try {
       const result = await axios.get(
         "http://54.229.207.205:8989/v1/maxscale/threads",
@@ -25,7 +24,6 @@ export default function Threads() {
     } catch (error) {
       setIsError(true);
     }
-    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -53,12 +51,15 @@ export default function Threads() {
   });
 
   return (
-    <div className="threads">
-      <div className="main-header__thread">
-        <div className="main-header__heading">Hello User</div>
-        <div className="main-header__updates">Recent Items</div>
+    <>
+      {isError && <div>Something went wrong ...</div>}
+      <div className="threads">
+        <div className="main-header__thread">
+          <div className="main-header__heading">Hello User</div>
+          <div className="main-header__updates">Recent Items</div>
+        </div>
+        <div className="graph__container"> {LoadRenderedData}</div>
       </div>
-      <div className="graph__container"> {LoadRenderedData}</div>
-    </div>
+    </>
   );
 }
