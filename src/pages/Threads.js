@@ -58,7 +58,7 @@ export default function Threads() {
 
   return (
     <>
-      {isError && <div>Something went wrong ...</div>}
+      {isError && <div style={{ color: "red" }}>Something went wrong ...</div>}
       <div className="threads">
         <div className="main-header__thread">
           <div className="main-header__heading">

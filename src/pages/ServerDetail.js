@@ -99,7 +99,7 @@ export default function ServerDetail() {
 
   return (
     <>
-      {isError && <div>Something went wrong ...</div>}
+      {isError && <div style={{ color: "red" }}>Something went wrong ...</div>}
       <div className="server">
         <div className="main-header__server">
           <div className="main-header__heading">
