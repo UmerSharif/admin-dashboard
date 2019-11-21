@@ -30,15 +30,13 @@ export default function Threads() {
   //calling the api call function inside react hook
   useEffect(() => {
     //calling the api every second
-    // const intervalId = setInterval(() => {
-    //   fetchData();
-    // }, 1000);
+    const intervalId = setInterval(() => {
+      fetchData();
+    }, 1000);
 
-    // cleaning the interval in component unmount lifecycle hook
-    // return () => clearInterval(intervalId);
-    fetchData();
+    //cleaning the interval in component unmount lifecycle hook
+    return () => clearInterval(intervalId);
   }, []);
-  console.log(data);
 
   //maping through the returned api call
   const LoadRenderedData = data.map((obj, index) => {
