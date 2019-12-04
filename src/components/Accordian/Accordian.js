@@ -16,14 +16,7 @@ export default function Accordian(props) {
     setActive(!active);
   };
 
-  //extracting server id from children passed to accordian
 
-  // const x = props.children.props.children.map(d => {
-  //   console.log(typeof d.props.children);
-  //   return d.props.children;
-  // });
-  // console.log(x[0][1]);
-  // const serverID = x[0][1];
 
   return (
     <>
